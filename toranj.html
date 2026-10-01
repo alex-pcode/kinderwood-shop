@@ -1,0 +1,198 @@
+<!doctype html><html lang="sr-Latn"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex, nofollow">
+<title>Montessori toranj za učenje — Kinder Wood</title><meta name="description" content="Sklopivi drveni toranj za učenje za jedno ili dvoje dece, od 1 do 6 godina. Ručno rađen u Srbiji, plaćanje pouzećem."><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Rammetto+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet"><style>
+:root{--wood:#8a5a34;--wood-d:#3b2616;--wood-l:#c79a6b;--cream:#fbf4e6;--paper:#fff;--ink:#2b1d12;--muted:#7a6350;--line:#e8d9bf;
+--blue:#2358c4;--red:#d63a2a;--green:#238a3d;--orange:#f0961d;--r:20px;--shadow:0 12px 30px -14px rgba(59,38,22,.4)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Nunito,system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer;background:none;border:0;color:inherit}
+.wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:"Rammetto One",Georgia,serif;font-weight:400;line-height:1.1;color:var(--wood-d);letter-spacing:.2px}
+.eyebrow{font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--wood)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;padding:15px 26px;border-radius:14px;font-weight:800;font-size:15px;border:2px solid var(--wood-d);transition:transform .15s,background .15s}
+.btn-p{background:var(--wood-d);color:#fff;box-shadow:0 4px 0 #1d1209}.btn-p:hover{transform:translateY(-2px)}.btn-p:active{transform:translateY(2px);box-shadow:none}
+.btn-g{background:transparent;color:var(--wood-d)}.btn-g:hover{background:var(--wood-d);color:#fff}
+.btn.block{display:flex;width:100%}
+.blocks{display:inline-flex;gap:4px}.blocks i{width:11px;height:11px;border-radius:3px;display:block}
+.blocks i:nth-child(1){background:var(--blue)}.blocks i:nth-child(2){background:var(--red)}.blocks i:nth-child(3){background:var(--green)}.blocks i:nth-child(4){background:var(--orange)}
+.announce{background:var(--wood-d);color:#f6dfbf;font-size:13px;font-weight:700;text-align:center;padding:9px 16px}
+header.site{position:sticky;top:0;z-index:50;background:rgba(251,244,230,.94);backdrop-filter:blur(10px);border-bottom:2px solid var(--line)}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;height:70px;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;font-family:"Rammetto One",serif;font-size:19px;color:var(--wood-d)}
+.logo img{width:46px;height:46px;border-radius:50%;object-fit:cover}
+nav.main{display:flex;gap:26px;font-weight:800;font-size:14px}nav.main a:hover,nav.main a.on{color:var(--red)}
+.cartbtn{display:flex;align-items:center;gap:8px;border:2px solid var(--wood-d);border-radius:14px;padding:9px 14px;font-weight:800;background:#fff;position:relative}
+.cartbtn svg{width:20px;height:20px;stroke:var(--wood-d);fill:none;stroke-width:2}
+#cnt{background:var(--red);color:#fff;font-size:12px;min-width:20px;height:20px;border-radius:10px;display:grid;place-items:center;padding:0 5px}#cnt:empty{display:none}
+@media(max-width:760px){nav.main{display:none}.logo span{font-size:16px}}
+/* drawer */
+.ovl{position:fixed;inset:0;background:rgba(30,18,8,.5);z-index:70;opacity:0;pointer-events:none;transition:.2s}.ovl.on{opacity:1;pointer-events:auto}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(420px,100%);background:var(--cream);z-index:75;transform:translateX(105%);transition:transform .25s;display:flex;flex-direction:column}.drawer.on{transform:none}
+.dhead{display:flex;justify-content:space-between;align-items:center;padding:16px 18px;border-bottom:2px solid var(--line)}.dhead h3{font-size:20px}
+.x{width:38px;height:38px;border-radius:50%;border:2px solid var(--line);font-size:20px;line-height:1}
+.dbody{flex:1;overflow:auto;padding:12px 18px}.dfoot{padding:14px 18px;border-top:2px solid var(--line);background:#fff}
+.line{display:grid;grid-template-columns:68px 1fr auto;gap:12px;padding:12px 0;border-bottom:1px solid var(--line);align-items:center}
+.line img{width:68px;height:68px;object-fit:cover;border-radius:12px;background:var(--line)}
+.line .n{font-weight:800;line-height:1.25}.line .v{font-size:13px;color:var(--muted)}
+.qty{display:inline-flex;align-items:center;border:2px solid var(--line);border-radius:12px;background:#fff;margin-top:6px}
+.qty button{width:34px;height:34px;font-weight:800;font-size:18px}.qty span{min-width:26px;text-align:center;font-weight:800}
+.rm{font-size:12px;color:var(--muted);text-decoration:underline;display:block;margin-top:4px}
+.tot{display:flex;justify-content:space-between;font-weight:700;padding:3px 0}.tot.big{font-size:19px;font-weight:800}
+.empty{text-align:center;color:var(--muted);padding:44px 0}
+/* checkout */
+.co{position:fixed;inset:0;z-index:90;background:var(--cream);overflow:auto;display:none}.co.on{display:block}
+.co .wrap{max-width:920px;padding-top:16px;padding-bottom:60px}
+.cohead{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+.cogrid{display:grid;gap:22px}@media(min-width:800px){.cogrid{grid-template-columns:1.2fr 1fr}}
+.card{background:#fff;border:2px solid var(--line);border-radius:var(--r);padding:18px}.card h3{font-size:18px;margin-bottom:12px}
+label.f{display:block;font-weight:800;font-size:14px;margin-bottom:12px}
+label.f input,label.f textarea{display:block;width:100%;margin-top:4px;font:inherit;font-weight:600;padding:12px 14px;border:2px solid var(--line);border-radius:12px;background:#fff;color:var(--ink)}
+label.f input:focus,label.f textarea:focus{outline:0;border-color:var(--blue)}
+.two{display:grid;gap:12px}@media(min-width:520px){.two{grid-template-columns:1fr 1fr}}
+.pay{display:flex;gap:10px;align-items:flex-start;border:2px solid var(--green);background:#eff8f0;border-radius:12px;padding:12px;font-weight:800}
+.pay small{display:block;font-weight:600;color:var(--muted)}
+.done{text-align:center;padding:40px 0}.done .ok{width:76px;height:76px;border-radius:18px;background:var(--green);color:#fff;font-size:2.4rem;display:grid;place-items:center;margin:0 auto 16px}
+.toast{position:fixed;left:50%;bottom:90px;transform:translate(-50%,20px);background:var(--wood-d);color:#fff;padding:12px 20px;border-radius:14px;font-weight:700;z-index:95;opacity:0;transition:.25s;pointer-events:none;max-width:92vw;text-align:center}.toast.on{opacity:1;transform:translate(-50%,0)}
+:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+section.block{padding:80px 0}
+.sec-head h2{font-size:clamp(26px,4vw,40px);margin-top:10px}
+.revs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px}
+.rev{background:#fff;border:2px solid var(--line);border-radius:var(--r);padding:22px;display:flex;flex-direction:column;gap:12px}
+.rev .stars{color:var(--orange);letter-spacing:2px}.rev p{font-size:16px;font-weight:600;flex:1}.rev b{font-size:13px;color:var(--wood)}
+@media(max-width:900px){.revs{grid-template-columns:1fr 1fr}}@media(max-width:600px){.revs{grid-template-columns:1fr}section.block{padding:56px 0}}
+details{border-bottom:2px solid var(--line);padding:16px 0}summary{cursor:pointer;list-style:none;font-weight:800;display:flex;justify-content:space-between;gap:12px;color:var(--wood-d)}
+summary::-webkit-details-marker{display:none}summary::after{content:"+";font-size:22px;line-height:1;transition:transform .2s}details[open] summary::after{transform:rotate(45deg)}
+details .inner{color:var(--muted);margin-top:10px;font-size:15px}details ul{padding-left:18px}details li{margin:4px 0}
+footer{background:var(--wood-d);color:#e6d3b8;padding:40px 0 28px;font-size:14px}footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px}footer a{text-decoration:underline;text-underline-offset:3px}
+
+.crumbs{font-size:13px;color:var(--muted);padding:18px 0}.crumbs span{margin:0 8px;opacity:.5}
+.pdp{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:48px;padding-bottom:60px;align-items:start}
+.gal{position:sticky;top:94px}
+.stage{border-radius:26px;overflow:hidden;background:#efe0c4;aspect-ratio:4/5;border:6px solid #fff;box-shadow:var(--shadow);position:relative}
+.stage img{width:100%;height:100%;object-fit:cover}
+.thumbs{display:flex;gap:10px;margin-top:12px;overflow-x:auto}
+.thumbs button{flex:0 0 72px;height:72px;border-radius:12px;overflow:hidden;border:3px solid transparent;background:#efe0c4}.thumbs button[aria-pressed=true]{border-color:var(--blue)}.thumbs img{width:100%;height:100%;object-fit:cover}
+.info h1{font-size:clamp(28px,4vw,44px);margin:10px 0 10px}
+.price{font-size:34px;font-weight:800;color:var(--wood-d);margin:14px 0 4px}.price small{font-size:13px;color:var(--muted);font-weight:700}
+.intro{font-size:17px;color:#4d3a29;margin:12px 0 20px}
+.opt-head{font-weight:800;font-size:14px;margin-bottom:10px}.opt-head span{color:var(--muted);font-weight:600}
+.models{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.model{border:3px solid var(--line);border-radius:16px;background:#fff;padding:14px;text-align:left;transition:border-color .15s}
+.model b{display:block;color:var(--wood-d)}.model small{color:var(--muted);font-weight:600;font-size:13px}.model .p{display:block;margin-top:6px;font-weight:800}
+.model[aria-pressed=true]{border-color:var(--blue);background:#eef3fd}
+.buy{display:flex;gap:12px;margin-top:20px}.buy .qty{margin:0;border-color:var(--wood-d)}.buy .qty button{height:52px;width:42px}.buy .btn{flex:1}
+.perks{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:20px}
+.perk{background:#fff;border:2px solid var(--line);border-radius:14px;padding:12px 8px;font-size:12.5px;font-weight:800;text-align:center;color:var(--wood-d)}
+.acc{margin-top:26px;border-top:2px solid var(--line)}
+table{width:100%;border-collapse:collapse;font-size:14px;margin-top:6px}th,td{text-align:left;padding:9px 8px;border-bottom:1px solid var(--line)}th{color:var(--wood-d)}
+.ok{color:var(--green);font-weight:800}
+.sticky-buy{position:fixed;left:0;right:0;bottom:0;z-index:60;background:#fff;border-top:2px solid var(--line);padding:10px 16px;display:none;align-items:center;gap:12px;transform:translateY(110%);transition:transform .25s}.sticky-buy.show{transform:none}
+.sticky-buy .t{flex:1;min-width:0}.sticky-buy .t b{display:block;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.sticky-buy .t span{font-size:13px;color:var(--muted);font-weight:800}
+@media(max-width:900px){.pdp{grid-template-columns:minmax(0,1fr);gap:28px}.gal{position:static}.sticky-buy{display:flex}footer{padding-bottom:90px}}
+@media(max-width:480px){.models{grid-template-columns:1fr}}
+</style></head><body>
+<div class="announce">Ručno rađeno u Srbiji · Dostava širom Srbije · Plaćanje pouzećem</div>
+<header class="site"><div class="wrap">
+<a class="logo" href="index.html"><img src="img/logo.jpg" alt="Kinder Wood logo"><span>Kinder Wood</span></a>
+<nav class="main" aria-label="Glavna navigacija"><a class="on" href="toranj.html">Toranj za učenje</a><a href="index.html#zasto">Zašto toranj</a><a href="index.html#utisci">Utisci</a><a href="index.html#proizvodnja">Proizvodnja</a><a href="index.html#faq">Pitanja</a></nav>
+<button class="cartbtn" id="openCart" aria-label="Korpa"><svg viewBox="0 0 24 24"><path d="M5 8h14l-1.2 11.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>Korpa<span id="cnt"></span></button>
+</div></header>
+<main>
+<div class="wrap">
+<nav class="crumbs" aria-label="Putanja"><a href="index.html">Početna</a><span>/</span>Montessori toranj za učenje</nav>
+<div class="pdp">
+<div class="gal"><div class="stage"><img id="stageImg" src="img/tower-kitchen.jpg" alt="Montessori toranj za učenje"></div><div class="thumbs" id="thumbs"></div></div>
+<div class="info"><span class="eyebrow">Za decu od 1 do 6 godina</span>
+<h1>Montessori toranj za učenje</h1>
+<div class="price"><span id="price"></span> <small>PDV uključen</small></div>
+<p class="intro">Dok vi kuvate, dete stoji uz vas na pravoj visini: bezbedno, uključeno i samostalno. Bez penjanja na stolice i bez podizanja u rukama. Sklopiv, stabilan, ručno rađen u Srbiji.</p>
+<div class="opt-head">Model: <span id="modelName"></span></div>
+<div class="models" id="models"></div>
+<div class="buy"><div class="qty"><button type="button" id="qm" aria-label="Manje">&minus;</button><span id="qv">1</span><button type="button" id="qp" aria-label="Više">+</button></div><button class="btn btn-p" id="atc" type="button">Dodaj u korpu</button></div>
+<div class="perks"><div class="perk">Ručno izrađen u Srbiji</div><div class="perk">Sklopiv i praktičan</div><div class="perk">Pčelinji vosak</div></div>
+<div class="acc">
+<details open><summary>Opis</summary><div class="inner"><p>Montessori pristup nas uči da dete najbolje uči kroz pokret i praksu. Naš drveni toranj omogućava deci da bezbedno učestvuju u svakodnevnim aktivnostima, u kuhinji, kupatilu ili igri, a razvija samostalnost, motoriku, koordinaciju i samopouzdanje.</p></div></details>
+<details><summary>Karakteristike</summary><div class="inner"><ul><li>Za decu od 1 do 6 godina</li><li>Stabilan, siguran i jednostavan za sklapanje</li><li>Sklopiv, zauzima jako malo mesta</li><li>Ručno izrađen od drveta u Srbiji</li><li>Prirodna varijanta premazana pčelinjim voskom</li><li>Model za jedno dete i model za dvoje dece (blizance)</li></ul></div></details>
+<details><summary>Toranj ili stolica?</summary><div class="inner"><table><thead><tr><th></th><th>Toranj</th><th>Stolica</th></tr></thead><tbody>
+<tr><td>Dete na pravoj visini uz vas</td><td class="ok">Da</td><td>Da</td></tr><tr><td>Stabilno, bez straha od pada</td><td class="ok">Da</td><td>Klizavo i nestabilno</td></tr><tr><td>Ograda oko deteta</td><td class="ok">Da</td><td>Ne</td></tr><tr><td>Sklopivo kada ne treba</td><td class="ok">Da</td><td>Ne</td></tr><tr><td>Razvija samostalnost</td><td class="ok">Da</td><td>Ne</td></tr></tbody></table></div></details>
+<details><summary>Dostava i plaćanje</summary><div class="inner"><p>Dostava širom Srbije kurirskom službom Bex. Plaćanje pouzećem pri preuzimanju paketa. Cena dostave: 590 RSD. Posle porudžbine pozivamo vas radi potvrde.</p></div></details>
+</div>
+<p style="font-size:13px;color:var(--muted);margin-top:16px">Pitanja? <a href="https://www.instagram.com/kinderwoodtoys/" target="_blank" rel="noopener" style="text-decoration:underline">Pišite nam</a></p>
+</div></div></div>
+
+<section class="block" style="padding-top:20px"><div class="wrap"><div class="sec-head"><span class="eyebrow">Utisci kupaca</span><h2>Šta kažu roditelji</h2></div><div class="revs"><div class="rev"><span class="stars">★★★★★</span><p>„Stigao je toranj, super je, a unuk ne silazi sa njega. Zet kaže da je to najbolja stvar koju smo uzeli!“</p><b>Zorica</b></div><div class="rev"><span class="stars">★★★★★</span><p>„Prezadovoljni smo tornjem, a i mala vragolanka ga obožava! Hvala puno! Toplo Vas preporučujem svima!“</p><b>Milica</b></div><div class="rev"><span class="stars">★★★★★</span><p>„Toranj je prava pobeda! Čerkici se toliko sviđa da se po ceo dan penje i spušta da nam pokaže da ume sama“</p><b>Roditelj, iz poruke kupca</b></div><div class="rev"><span class="stars">★★★★★</span><p>„Stigao je toranj. Konacno nema vise nosenja u kuhinji hvala vam“</p><b>Roditelj, iz poruke kupca</b></div><div class="rev"><span class="stars">★★★★★</span><p>„Stigao toranj-korisnica veoma zadovoljna i zove ga MERDEVINE. Hvala vam veliko, vec vidim da cemo ga stalno koristiti“</p><b>Roditelj, iz poruke kupca</b></div></div></div></section>
+<section class="block" style="padding-top:0"><div class="wrap" style="max-width:800px"><div class="sec-head"><span class="eyebrow">Pitanja i odgovori</span><h2>Često postavljana pitanja</h2></div><div style="margin-top:24px;border-top:2px solid var(--line)"><details><summary>Za koji uzrast je toranj?</summary><div class="inner"><p>Za decu od 1 do 6 godina. Toranj je sklopiv, stabilan i napravljen da bude bezbedno mesto pored vas u kuhinji, kupatilu ili za igru.</p></div></details><details><summary>Koji model da izaberem: za jedno ili za dvoje dece?</summary><div class="inner"><p>Imamo model za jedno dete i model za dvoje dece (blizance ili dva mališana). Ako imate blizance, birajte model za dvoje, jer tako nema nadmetanja ko će prvi na toranj.</p></div></details><details><summary>Kako se toranj sklapa i koliko zauzima mesta?</summary><div class="inner"><p>Sklapa se i rasklapa jednostavno, a kada je sklopljen zauzima jako malo mesta u kuhinji.</p></div></details><details><summary>Od čega je napravljen?</summary><div class="inner"><p>Od drveta, ručno izrađen u Srbiji. Prirodna varijanta je premazana pčelinjim voskom.</p></div></details><details><summary>Kako plaćam i kada stiže paket?</summary><div class="inner"><p>Plaćate pouzećem, kuriru pri preuzimanju. Paket šaljemo Bex kurirskom službom širom Srbije. Poručite na sajtu, a mi vas pozovemo radi potvrde.</p></div></details><details><summary>Imam dodatno pitanje.</summary><div class="inner"><p>Pišite nam na Instagramu <a href="https://www.instagram.com/kinderwoodtoys/" target="_blank" rel="noopener" style="text-decoration:underline">@kinderwoodtoys</a> i rado ćemo odgovoriti.</p></div></details></div></div></section>
+<div class="sticky-buy" id="stk"><div class="t"><b>Montessori toranj</b><span id="stkP"></span></div><button class="btn btn-p" id="stkB" type="button">Dodaj u korpu</button></div>
+</main>
+<footer><div class="wrap"><span>© 2026 Kinder Wood · Drvene igračke i toranj za učenje · Proizvedeno s ljubavlju u Srbiji</span><a href="https://www.instagram.com/kinderwoodtoys/" target="_blank" rel="noopener">Pitanja? Pišite nam na Instagramu @kinderwoodtoys</a></div></footer>
+<div class="ovl" id="ovl"></div>
+<aside class="drawer" id="drawer" aria-hidden="true" aria-label="Korpa"><div class="dhead"><h3>Vaša korpa</h3><button class="x" id="closeCart" aria-label="Zatvori">&times;</button></div><div class="dbody" id="dbody"></div><div class="dfoot" id="dfoot"></div></aside>
+<div class="co" id="co"><div class="wrap">
+<div class="cohead"><a class="logo" href="index.html"><img src="img/logo.jpg" alt=""><span>Kinder Wood</span></a><button class="btn btn-g" id="backCart" type="button">&larr; Nazad na korpu</button></div>
+<div id="coMain"><h2 style="font-size:28px;margin-bottom:16px">Porudžbina</h2>
+<form id="coForm" novalidate><div class="cogrid"><div>
+<div class="card"><h3>Podaci za dostavu</h3>
+<label class="f">Ime i prezime<input name="ime" autocomplete="name" required></label>
+<div class="two"><label class="f">Telefon<input name="tel" type="tel" autocomplete="tel" required></label><label class="f">Email (nije obavezno)<input name="mail" type="email" autocomplete="email"></label></div>
+<label class="f">Adresa (ulica i broj)<input name="adresa" autocomplete="street-address" required></label>
+<div class="two"><label class="f">Grad / mesto<input name="grad" autocomplete="address-level2" required></label><label class="f">Poštanski broj<input name="pb" inputmode="numeric" autocomplete="postal-code"></label></div>
+<label class="f">Napomena (nije obavezno)<textarea name="nap" rows="2"></textarea></label></div>
+<div class="card" style="margin-top:16px"><h3>Plaćanje</h3><div class="pay"><input type="radio" checked aria-label="Pouzećem"><div>Plaćanje pouzećem<small>Plaćate kuriru gotovinom kada preuzmete paket.</small></div></div></div>
+</div><div><div class="card" style="position:sticky;top:12px"><h3>Pregled porudžbine</h3><div id="coSum"></div><button class="btn btn-p block" type="submit" style="margin-top:14px">Potvrdi porudžbinu</button><p style="font-size:12px;color:var(--muted);margin-top:10px;text-align:center">Javljamo se telefonom radi potvrde pre slanja.</p></div></div></div></form></div>
+<div id="coDone" class="done" hidden><div class="ok">&#10003;</div><h2 style="font-size:28px">Hvala na porudžbini!</h2><p style="margin:12px auto;max-width:480px" id="doneTxt"></p><div class="card" style="max-width:480px;margin:18px auto;text-align:left" id="doneSum"></div><a class="btn btn-p" href="index.html">Nazad na prodavnicu</a></div>
+</div></div><div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script>
+const PRODUCTS={toranj:{name:'Montessori toranj za učenje'}};
+const SHIP=590;
+const fmt=n=>n.toLocaleString('de-DE')+' RSD';
+const $=s=>document.querySelector(s);
+const esc=s=>String(s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+let cart=[];try{cart=JSON.parse(localStorage.getItem('kinderwood-cart')||'[]')}catch(e){}
+cart=cart.filter(c=>PRODUCTS[c.id]);
+const save=()=>{try{localStorage.setItem('kinderwood-cart',JSON.stringify(cart))}catch(e){}};
+function add(id,v,price,qty,img){const ex=cart.find(c=>c.id===id&&c.v===v);if(ex)ex.q+=qty;else cart.push({id,v,price,q:qty,img});save();render();toast('Dodato u korpu')}
+function toast(t){const e=$('#toast');e.textContent=t;e.classList.add('on');clearTimeout(toast.t);toast.t=setTimeout(()=>e.classList.remove('on'),1900)}
+const sub=()=>cart.reduce((s,c)=>s+c.price*c.q,0);
+function render(){
+  const n=cart.reduce((s,c)=>s+c.q,0);$('#cnt').textContent=n||'';
+  const body=$('#dbody'),foot=$('#dfoot');
+  if(!cart.length){body.innerHTML='<div class="empty"><p style="font-family:Rammetto One;font-size:20px;color:var(--wood-d)">Korpa je prazna</p><p style="margin-top:8px">Dodajte toranj za učenje.</p></div>';foot.innerHTML='<a class="btn btn-p block" href="toranj.html">Pogledaj toranj</a>';return}
+  body.innerHTML=cart.map((c,i)=>`<div class="line"><img src="${c.img}" alt=""><div><div class="n">${PRODUCTS[c.id].name}</div><div class="v">${esc(c.v)}</div><div class="qty"><button data-d="-1" data-i="${i}" aria-label="Manje">&minus;</button><span>${c.q}</span><button data-d="1" data-i="${i}" aria-label="Više">+</button></div><button class="rm" data-rm="${i}">Ukloni</button></div><div style="font-weight:800">${fmt(c.price*c.q)}</div></div>`).join('');
+  foot.innerHTML=`<div class="tot"><span>Proizvodi</span><span>${fmt(sub())}</span></div><div class="tot"><span>Dostava</span><span>${fmt(SHIP)}</span></div><div class="tot big"><span>Ukupno</span><span>${fmt(sub()+SHIP)}</span></div><button class="btn btn-p block" id="toCo" style="margin-top:12px">Nastavi na porudžbinu</button>`;
+}
+function drawer(o){$('#drawer').classList.toggle('on',o);$('#ovl').classList.toggle('on',o);$('#drawer').setAttribute('aria-hidden',!o);document.body.style.overflow=o?'hidden':''}
+$('#openCart').onclick=()=>drawer(true);$('#closeCart').onclick=()=>drawer(false);$('#ovl').onclick=()=>drawer(false);
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){drawer(false);if($('#co').classList.contains('on'))closeCo()}});
+$('#dbody').onclick=e=>{const t=e.target;if(t.dataset.d){const c=cart[+t.dataset.i];c.q+=+t.dataset.d;if(c.q<1)cart.splice(+t.dataset.i,1);save();render()}if(t.dataset.rm){cart.splice(+t.dataset.rm,1);save();render()}};
+$('#dfoot').onclick=e=>{if(e.target.id==='toCo')openCo()};
+function sum(){$('#coSum').innerHTML=cart.map(c=>`<div class="tot" style="font-weight:600"><span>${c.q} &times; ${PRODUCTS[c.id].name}<br><small style="font-weight:400;color:var(--muted)">${esc(c.v)}</small></span><span>${fmt(c.price*c.q)}</span></div>`).join('')+`<hr style="border:0;border-top:2px solid var(--line);margin:10px 0"><div class="tot"><span>Proizvodi</span><span>${fmt(sub())}</span></div><div class="tot"><span>Dostava (Bex)</span><span>${fmt(SHIP)}</span></div><div class="tot big"><span>Za plaćanje pouzećem</span><span>${fmt(sub()+SHIP)}</span></div>`}
+function openCo(){if(!cart.length)return;drawer(false);$('#coMain').hidden=false;$('#coDone').hidden=true;$('#co').classList.add('on');document.body.style.overflow='hidden';$('#co').scrollTop=0;sum()}
+function closeCo(){$('#co').classList.remove('on');document.body.style.overflow=''}
+$('#backCart').onclick=()=>{closeCo();drawer(true)};
+$('#coForm').onsubmit=e=>{e.preventDefault();const f=e.target;let bad=null;
+  ['ime','tel','adresa','grad'].forEach(n=>{const i=f[n];if(!i.value.trim()){i.style.borderColor='#d33';bad=bad||i}else i.style.borderColor=''});
+  if(bad){bad.focus();toast('Popunite obavezna polja');return}
+  const tot=sub()+SHIP,no='KW-'+Math.floor(10000+Math.random()*89999);
+  $('#doneTxt').textContent='Porudžbina '+no+' je primljena. Javljamo se telefonom radi potvrde, a paket šaljemo Bex kurirskom službom. Plaćate pouzećem pri preuzimanju.';
+  $('#doneSum').innerHTML='<p id="dn" style="font-weight:800"></p><hr style="border:0;border-top:2px solid var(--line);margin:10px 0">'+cart.map(c=>`<div class="tot" style="font-weight:600"><span>${c.q} &times; ${PRODUCTS[c.id].name}<br><small style="font-weight:400;color:var(--muted)">${esc(c.v)}</small></span><span>${fmt(c.price*c.q)}</span></div>`).join('')+`<div class="tot"><span>Dostava</span><span>${fmt(SHIP)}</span></div><div class="tot big"><span>Ukupno</span><span>${fmt(tot)}</span></div>`;
+  $('#dn').textContent=f.ime.value+', '+f.adresa.value+', '+f.pb.value+' '+f.grad.value+' · '+f.tel.value;
+  cart=[];save();render();$('#coMain').hidden=true;$('#coDone').hidden=false;$('#co').scrollTop=0};
+render();
+
+const MODELS=[{n:'Za jedno dete',s:'1 do 6 godina',p:11900},{n:'Za dvoje dece',s:'blizanci ili dva mališana',p:16900}];
+const IMGS=[['tower-kitchen','Toranj u kuhinji'],['tower-fold','Sklapanje tornja'],['stack','Tornjevi u radionici'],['ready','Spremni za slanje']];
+let mi=0,q=1;
+const sel=document.getElementById('models');
+function draw(){
+ sel.innerHTML=MODELS.map((m,i)=>`<button type="button" class="model" aria-pressed="${i===mi}" data-i="${i}"><b>${m.n}</b><small>${m.s}</small><span class="p">${fmt(m.p)}</span></button>`).join('');
+ sel.querySelectorAll('button').forEach(b=>b.onclick=()=>{mi=+b.dataset.i;draw()});
+ $('#modelName').textContent=MODELS[mi].n;const t=fmt(MODELS[mi].p*q);$('#price').textContent=fmt(MODELS[mi].p);$('#stkP').textContent=MODELS[mi].n+' · '+t;$('#qv').textContent=q;
+}
+$('#thumbs').innerHTML=IMGS.map((x,i)=>`<button type="button" aria-pressed="${i===0}" data-i="${i}" aria-label="${x[1]}"><img src="img/${x[0]}.jpg" alt=""></button>`).join('');
+$('#thumbs').querySelectorAll('button').forEach(b=>b.onclick=()=>{$('#stageImg').src='img/'+IMGS[+b.dataset.i][0]+'.jpg';$('#thumbs').querySelectorAll('button').forEach(o=>o.setAttribute('aria-pressed',o===b))});
+$('#qm').onclick=()=>{q=Math.max(1,q-1);draw()};$('#qp').onclick=()=>{q=Math.min(10,q+1);draw()};
+function addAll(){add('toranj',MODELS[mi].n,MODELS[mi].p,q,'img/tower-kitchen.jpg');drawer(true)}
+$('#atc').onclick=addAll;$('#stkB').onclick=addAll;
+new IntersectionObserver(([e])=>$('#stk').classList.toggle('show',!e.isIntersecting&&e.boundingClientRect.top<0)).observe($('#atc'));
+draw();
+</script></body></html>
